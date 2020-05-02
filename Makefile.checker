@@ -1,0 +1,17 @@
+.PHONY: all clean run pack build-pre build-post
+
+all: build-pre run build-post
+
+build-pre:
+
+build-post:
+
+run:
+	@./run_all.sh
+
+pack:
+	zip -r summer-school.zip _test/ Makefile.checker \
+	Makefile dss_test.d run_all.sh README.md
+
+clean:
+	rm -f *~
